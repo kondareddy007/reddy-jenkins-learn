@@ -1,14 +1,20 @@
 pipeline {
-    agent {
-        node {
-            label 'AGENT'
-        }
-    }
+    agent none
+    // agent {
+    //     node {
+    //         label 'AGENT'
+    //     }
+    // }
 
     stages {
         stage('Build'){
+            agent {
+                node {
+                    label 'AGENT'
+                }
+            }
             steps{
-                echo "Building"
+                echo "testing stage level agent"
             }
         }
         stage('Tesing'){
