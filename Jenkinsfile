@@ -15,14 +15,19 @@ pipeline {
             // }
             steps{
                 echo "testing stage level agent"
+                sh """
+                    echo "this is shell script"
+                    pwd
+                """
             }
+
         }
         stage('Tesing'){
             steps{
                 echo "Testing stage level testing"
             }
         }
-        stag('Deploy'){
+        stage('Deploy'){
             steps{
                 echo 'Deploy the code stage level deploy'
             }
