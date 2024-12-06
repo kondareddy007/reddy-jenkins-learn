@@ -22,7 +22,7 @@ pipeline {
                 echo "Testing stage level testing"
             }
         }
-        stage('Deploy'){
+        stag('Deploy'){
             steps{
                 echo 'Deploy the code stage level deploy'
             }
