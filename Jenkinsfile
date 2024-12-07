@@ -8,6 +8,9 @@ pipeline {
     environment {
         NAME = 'Kondareddy'
     }
+    options {
+        timeout(time: 1, units: 'HOUR')
+    }
     stages {
         stage('Build'){
             // agent {
