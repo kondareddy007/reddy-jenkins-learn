@@ -6,7 +6,7 @@ pipeline {
         }
     }
     triggers {
-        cron ('* * * * *')
+        cron ('H/30 * * * *')
     }
     environment {
         NAME = 'Kondareddy'
