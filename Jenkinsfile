@@ -21,6 +21,11 @@ pipeline {
         choice (name: 'choice', choices: ['DEV', 'QA', 'PROD'], description: 'pick any one')
         password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
     }
+
+    tools {
+        maven 'maven-3.9.9'
+        jdk 'java-17'
+    }
     stages {
         stage('Build'){
             // agent {
@@ -28,6 +33,14 @@ pipeline {
             //         label 'AGENT'
             //     }
             // }
+            input {
+                message "Should we connect?"
+                ok "Yes, We can connect"
+                submitter "alice, bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue:'kondareddy', defaultValue: "Who should i say hello to")
+                }
+            }
             steps{
                 echo "testing stage level agent"
             
@@ -39,6 +52,7 @@ pipeline {
                     sleep 10
                 """
                 // Access parametres
+                echo "Hello ${PERSON}, nice to meet you"
                 echo "Hello ${params.PERSON}"
                 echo "BIOGRAPHY ${params.BIOGRAPY}"
                 echo "choice ${params.choice}"
