@@ -5,6 +5,9 @@ pipeline {
             label 'AGENT'
         }
     }
+    triggers {
+        cron ('* * * * *')
+    }
     environment {
         NAME = 'Kondareddy'
     }
