@@ -17,10 +17,12 @@ pipeline {
             // }
             steps{
                 echo "testing stage level agent"
+            
                 sh """
                     echo "this is shell script"
                     echo "$NAME"
                     pwd
+                    printenv
                 """
                 
             }
