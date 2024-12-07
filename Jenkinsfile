@@ -9,7 +9,7 @@ pipeline {
         NAME = 'Kondareddy'
     }
     options {
-        timeout(time: 1, unit: 'HOURS')
+        timeout(time: 1, unit: 'SECONDS')
     }
     stages {
         stage('Build'){
@@ -26,6 +26,7 @@ pipeline {
                     echo "$NAME"
                     pwd
                     printenv
+                    sleep 10
                 """
                 
             }
