@@ -53,10 +53,10 @@ pipeline {
                 """
                 // Access parametres
                 echo "Hello ${PERSON_NAME}, nice to meet you"
-                echo "Hello ${params.PERSON}"
-                echo "BIOGRAPHY ${params.BIOGRAPY}"
-                echo "choice ${params.choice}"
-                echo "Password is ${params.password}"
+                // echo "Hello ${params.PERSON}"
+                // echo "BIOGRAPHY ${params.BIOGRAPY}"
+                // echo "choice ${params.choice}"
+                // echo "Password is ${params.password}"
                 
             }
 
