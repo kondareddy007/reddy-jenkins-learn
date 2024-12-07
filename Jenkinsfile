@@ -38,7 +38,7 @@ pipeline {
                 ok "Yes, We can connect"
                 submitter "alice, bob"
                 parameters {
-                    string (name: 'PERSON_NAME', defaultValue:'kondareddy', defaultValue: "Who should i say hello to")
+                    string ( name: 'PERSON_NAME', defaultValue:'kondareddy', defaultValue: "Who should i say hello to" )
                 }
             }
             steps{
