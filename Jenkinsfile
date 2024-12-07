@@ -5,7 +5,9 @@ pipeline {
             label 'AGENT'
         }
     }
-
+    environment {
+        NAME = 'Kondareddy'
+    }
     stages {
         stage('Build'){
             // agent {
@@ -17,8 +19,10 @@ pipeline {
                 echo "testing stage level agent"
                 sh """
                     echo "this is shell script"
+                    echo "$NAME"
                     pwd
                 """
+                
             }
 
         }
