@@ -12,6 +12,12 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
         disableConcurrentBuilds()
     }
+    parameters {
+        string (name: 'PERSON', defaultValue: 'prasanna', description: 'Who should i say hello to')
+        text (name: 'BIOGRAPY', defaultValue: '', description: 'Enter some information about person')
+        choice (name: 'choice', choices: ['dev' 'QA' 'prod'], description: 'pick any one')
+        password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
+    }
     stages {
         stage('Build'){
             // agent {
@@ -29,6 +35,11 @@ pipeline {
                     printenv
                     sleep 10
                 """
+                // Access parametres
+                echo "Hello ${params.PERSON}"
+                echo "BIOGRAPHY ${params.BIOGRAPY}"
+                echo "choice ${params.choice}"
+                echo "Password is ${params.password}"
                 
             }
 
