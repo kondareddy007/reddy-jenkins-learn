@@ -15,7 +15,7 @@ pipeline {
     parameters {
         string (name: 'PERSON', defaultValue: 'prasanna', description: 'Who should i say hello to')
         text (name: 'BIOGRAPY', defaultValue: '', description: 'Enter some information about person')
-        choice (name: 'choice', choices: ['dev' 'QA' 'prod'], description: 'pick any one')
+        choice (name: 'choice', choices: ['DEV', 'QA', 'PROD'], description: 'pick any one')
         password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
     }
     stages {
