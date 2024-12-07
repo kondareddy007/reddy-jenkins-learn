@@ -23,10 +23,10 @@ pipeline {
         password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
     }
 
-    tools {
-        maven 'maven-3.9.9'
-        jdk 'java-17'
-    }
+    // tools {
+    //     maven 'maven-3.9.9'
+    //     jdk 'java-17'
+    // }
     stages {
         stage('Build'){
             // agent {
