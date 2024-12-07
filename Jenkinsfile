@@ -15,12 +15,12 @@ pipeline {
         timeout(time: 1, unit: 'HOURS')
         disableConcurrentBuilds()
     }
-    parameters {
-        string (name: 'PERSON', defaultValue: 'prasanna', description: 'Who should i say hello to')
-        text (name: 'BIOGRAPY', defaultValue: '', description: 'Enter some information about person')
-        choice (name: 'choice', choices: ['DEV', 'QA', 'PROD'], description: 'pick any one')
-        password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
-    }
+    // parameters {
+    //     string (name: 'PERSON', defaultValue: 'prasanna', description: 'Who should i say hello to')
+    //     text (name: 'BIOGRAPY', defaultValue: '', description: 'Enter some information about person')
+    //     choice (name: 'choice', choices: ['DEV', 'QA', 'PROD'], description: 'pick any one')
+    //     password(name: 'password', defaultValue: 'SECRET', description: 'ENTER a Password')
+    // }
 
     tools {
         maven 'maven-3.9.9'
