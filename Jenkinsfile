@@ -38,7 +38,7 @@ pipeline {
                 ok "Yes, We can connect"
                 submitter "alice, bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue:'kondareddy', defaultValue: "Who should i say hello to")
+                    string (name: 'PERSON_NAME', defaultValue:'kondareddy', defaultValue: "Who should i say hello to")
                 }
             }
             steps{
@@ -52,7 +52,7 @@ pipeline {
                     sleep 10
                 """
                 // Access parametres
-                echo "Hello ${PERSON}, nice to meet you"
+                echo "Hello ${PERSON_NAME}, nice to meet you"
                 echo "Hello ${params.PERSON}"
                 echo "BIOGRAPHY ${params.BIOGRAPY}"
                 echo "choice ${params.choice}"
