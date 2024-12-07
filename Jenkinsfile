@@ -9,7 +9,7 @@ pipeline {
         NAME = 'Kondareddy'
     }
     options {
-        timeout(time: 1, unit: 'HOUR')
+        timeout(time: 1, unit: 'HOURS')
     }
     stages {
         stage('Build'){
